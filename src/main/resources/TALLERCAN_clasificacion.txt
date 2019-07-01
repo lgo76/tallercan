@@ -1,0 +1,53 @@
+Entities:
+-Calendario
+-Factura
+-Material
+-Pago
+-Persona
+-Servicio 
+-Usuario
+-Vehiculo
+
+Value objects:
+-Semana laboral
+-GastoServicioRealizado
+-MaterialServicio
+-Departamento
+-Documento(?)
+-EstadoOrden_trabajo
+-Orden_Trabajo (?)
+-Fabricante
+-MetodoPago
+-CC
+-Cheque
+-Tarjeta
+-Cat_prof
+-DatosBancarios
+-Direccion
+-Empleado
+-No_laboral
+-Pais
+-Propietario
+-Provincia
+-TipoVia
+-Log
+-Aseguradora
+-EstadoPresupuesto
+-GastoMaterial
+-Marca
+-Modelo
+-Presupuesto (Entity?)
+-Recepción (Entity?)
+-Siniestro (?)
+-TipoCombustible
+
+Aggregates:
+-Calendario-Semana laboral
+-Servicio-GastoServicioRealizado-MaterialServicio-Departamento
+-Factura-Documento-Orden_Trabajo-EstadoOrden_Trabajo
+-Material-Fabricante
+-Pago-MetodoPago-CC-Cheque-Tarjeta
+-Persona-Cat_Prof-DatosBancarios-Direccion-Empleado-No_laboral-Pais-Persona-Propietario-Provincia-TipoVia
+-Usuario-Log
+-Vehiculo-TipoCombustible-GastoMaterial-Marca-Modelo-Presupuesto-EstadoPresupuesto-Recepcion-Siniestro-Aseguradora
+
