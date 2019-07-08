@@ -3,6 +3,9 @@ package es.tallercan.domainModel.Vehiculo;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Recepcion {
 	public String tipoRecepcion;
 	public String indicaciones;

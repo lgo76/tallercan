@@ -3,12 +3,17 @@ package es.tallercan.domainModel.Calendario;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.*;
+
+@Entity
 public class Calendario {
+	@Id
+	public long id;
 	public Date fechaInicio;
 	public Date fechaFin;
 	public int horasDia;
 	public int horasSemana;
-	
+	@Embedded
 	public Set<Semana_Laboral> semanas_laborales;
 	
 	public Date getFechaInicio() {

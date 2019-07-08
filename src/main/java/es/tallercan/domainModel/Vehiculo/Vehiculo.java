@@ -1,11 +1,14 @@
 package es.tallercan.domainModel.Vehiculo;
+import javax.persistence.*;
 
 import java.util.Date;
 import java.util.Set;
 
 import es.tallercan.domainModel.Persona.Persona;
 
+@Entity
 public class Vehiculo {
+	@Id
 	public String matricula;
 	public String bastidor;
 	public Date fecha1matr;
@@ -15,7 +18,9 @@ public class Vehiculo {
 	public Date fechaAlta;
 	public Date fechaAnulacion;
 	public Date fechaModificacion;
+	@Embedded
 	public Set<Recepcion> recepciones;
+	@OneToOne
 	public Persona propietario;
 	
 	public String getMatricula() {

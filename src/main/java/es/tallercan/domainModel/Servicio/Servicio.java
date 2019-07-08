@@ -1,6 +1,10 @@
 package es.tallercan.domainModel.Servicio;
+import javax.persistence.*;
 
+@Entity
 public class Servicio {
+	@Id
+	public long id;
 	public String nombre;
 	public double precio;
 	public int tiempoEstimadoMin;

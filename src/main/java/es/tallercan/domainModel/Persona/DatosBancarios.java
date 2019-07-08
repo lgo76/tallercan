@@ -1,5 +1,8 @@
 package es.tallercan.domainModel.Persona;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class DatosBancarios {
 	public String banco;
 	public String sucursal;

@@ -2,6 +2,9 @@ package es.tallercan.domainModel.Usuario;
 
 import java.time.format.DateTimeFormatter;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Log {
 	public DateTimeFormatter fechaHora;
 	public String campo;

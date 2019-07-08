@@ -1,5 +1,8 @@
 package es.tallercan.domainModel.Calendario;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Semana_Laboral {
 	public int nroOrden;
 	public String diaSemana;

@@ -3,8 +3,12 @@ package es.tallercan.domainModel.Persona;
 import java.util.Date;
 
 import es.tallercan.domainModel.Usuario.Usuario;
+import javax.persistence.*;
 
+@Entity
 public class Persona {
+	@Id
+	public long id;
 	public String NIF;
 	public String tfno_fijo;
 	public String tfno_movil;
@@ -16,9 +20,13 @@ public class Persona {
 	public Date fechaModif;
 	public Date fechaAnulacion;
 	
+	@Embedded
 	public DatosBancarios datosBancarios;
+	@Embedded
 	public Provincia provincia;
+	@Embedded
 	public Direccion direccion;
+	@OneToOne
 	public Usuario usuario;
 	
 	public String getNIF() {

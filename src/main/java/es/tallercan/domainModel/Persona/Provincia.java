@@ -1,5 +1,8 @@
 package es.tallercan.domainModel.Persona;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Provincia {
 	public String nombre;
 	public Pais pais;

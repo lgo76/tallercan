@@ -1,11 +1,16 @@
 package es.tallercan.domainModel.Usuario;
+import javax.persistence.*;
 
 import java.util.Set;
 
+@Entity
 public class Usuario {
+	@Id
+	public long id;
 	public String nombre;
 	public String clave;
 	
+	@Embedded
 	public Set<Log> logs;
 
 	public String getNombre() {

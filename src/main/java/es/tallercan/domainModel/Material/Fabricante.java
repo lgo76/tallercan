@@ -1,5 +1,7 @@
 package es.tallercan.domainModel.Material;
+import javax.persistence.*;
 
+@Embeddable
 public class Fabricante {
 	public String nombre;
 

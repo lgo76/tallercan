@@ -2,10 +2,14 @@ package es.tallercan.domainModel.Factura;
 
 import java.sql.Date;
 import java.util.Set;
+import javax.persistence.*;
 
 import es.tallercan.domainModel.Pago.Pago;
 
+@Entity
 public class Factura {
+	@Id
+	public long id;
 	public int numero;
 	public Date anho;
 	public double importeNeto;
@@ -15,6 +19,7 @@ public class Factura {
 	public String nif;
 	public String nombre;
 	
+	@OneToMany
 	public Set<Pago> pagos;
 
 	public int getNumero() {
