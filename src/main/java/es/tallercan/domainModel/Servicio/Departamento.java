@@ -2,10 +2,14 @@ package es.tallercan.domainModel.Servicio;
 
 import java.util.Set;
 
+import javax.persistence.*;
+
+@Embeddable
 public class Departamento {
 	public String nombre;
 	public String acronimo;
 	
+	@OneToMany
 	public Set<Servicio> servicios;
 
 	public String getNombre() {

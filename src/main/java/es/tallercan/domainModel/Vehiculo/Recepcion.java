@@ -3,7 +3,7 @@ package es.tallercan.domainModel.Vehiculo;
 import java.util.Date;
 import java.util.Set;
 
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
 @Embeddable
 public class Recepcion {
@@ -13,6 +13,7 @@ public class Recepcion {
 	public float kms;
 	public Date fechaHoraEntrega;
 	
+	@Embedded
 	public Set<Presupuesto> presupuestos;
 
 	public String getTipoRecepcion() {

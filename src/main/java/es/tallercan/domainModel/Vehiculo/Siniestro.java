@@ -2,6 +2,9 @@ package es.tallercan.domainModel.Vehiculo;
 
 import java.util.Date;
 
+import javax.persistence.*;
+
+@Embeddable
 public class Siniestro {
 	public String numSiniestroTaller;
 	public String numSiniestroComp;
@@ -11,7 +14,9 @@ public class Siniestro {
 	public String daños;
 	public String poliza;
 	public String franquicia;
+	@Embedded
 	public Recepcion recepcion;
+	@Embedded
 	public Aseguradora aseguradora;
 	public String getNumSiniestroTaller() {
 		return numSiniestroTaller;

@@ -2,17 +2,24 @@ package es.tallercan.domainModel.Factura;
 
 import java.util.Set;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Servicio.Servicio;
 import es.tallercan.domainModel.Vehiculo.Presupuesto;
 
+@Embeddable
 public class Documento {
 	public String etiquetaContenido;
 	public byte fichero;
 	public int extension;
 	
+	@Embedded
 	public Set<Presupuesto> presupuestos;
+	@Embedded
 	public Set<Orden_Trabajo> ordenes_trabajo;
+	@OneToOne
 	public Servicio servicio;
+	@OneToMany
 	public Set<Factura> facturas;
 	
 	public String getEtiquetaContenido() {

@@ -1,14 +1,17 @@
 package es.tallercan.domainModel.Persona;
 
+import javax.persistence.*;
+
+@Embeddable
 public class Cat_Prof {
-	public String nombre;
+	public String cat_prof;
 
 	public String getNombre() {
-		return nombre;
+		return cat_prof;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.cat_prof = nombre;
 	}
 	
 	

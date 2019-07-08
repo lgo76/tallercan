@@ -2,6 +2,9 @@ package es.tallercan.domainModel.Persona;
 
 import java.util.Date;
 
+import javax.persistence.*;
+
+@Embeddable
 public class No_Laboral {
 	public Date fecha_ini;
 	public Date fecha_fin;

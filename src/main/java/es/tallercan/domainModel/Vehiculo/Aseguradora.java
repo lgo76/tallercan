@@ -1,14 +1,17 @@
 package es.tallercan.domainModel.Vehiculo;
 
+import javax.persistence.*;
+
+@Embeddable
 public class Aseguradora {
-	public String nombre;
+	public String aseguradora;
 
 	public String getNombre() {
-		return nombre;
+		return aseguradora;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.aseguradora = nombre;
 	}
 	
 	

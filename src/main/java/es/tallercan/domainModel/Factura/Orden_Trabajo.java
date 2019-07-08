@@ -3,11 +3,15 @@ package es.tallercan.domainModel.Factura;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Persona.Empleado;
 import es.tallercan.domainModel.Vehiculo.Presupuesto;
 
+@Embeddable
 public class Orden_Trabajo {
 	public String observaciones;
+	@Enumerated
 	public EstadoOrden_Trabajo estado;
 	public Date fechaEntrega;
 	public Date fechaPreparacion;

@@ -1,11 +1,15 @@
 package es.tallercan.domainModel.Vehiculo;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Material.Material;
 
+@Embeddable
 public class GastoMaterial {
 	public int unidades;
 	public double precio;
 	public double descuento;
+	@OneToOne
 	public Material material;
 	
 	public int getUnidades() {

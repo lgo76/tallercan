@@ -3,14 +3,20 @@ package es.tallercan.domainModel.Persona;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Servicio.Departamento;
 
+@Embeddable
 public class Empleado extends Persona{
 	public String idEmpleado;
 	public Date fecha1contrato;
 	public int numHijos;
+	@Embedded
 	public Departamento departamento;
+	@Embedded
 	public Cat_Prof cat_prof;
+	@Embedded
 	public Set<No_Laboral> no_laborales;
 	
 	public Cat_Prof getCat_prof() {

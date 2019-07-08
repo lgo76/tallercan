@@ -1,14 +1,17 @@
 package es.tallercan.domainModel.Persona;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Pais {
-	public String nombre;
+	public String pais;
 
 	public String getNombre() {
-		return nombre;
+		return pais;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.pais = nombre;
 	}
 	
 	

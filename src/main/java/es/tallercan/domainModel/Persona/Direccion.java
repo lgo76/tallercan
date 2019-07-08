@@ -1,9 +1,11 @@
 package es.tallercan.domainModel.Persona;
 
-import javax.persistence.Embeddable;
+import javax.persistence.*;
+
 
 @Embeddable
 public class Direccion {
+	@Enumerated
 	public TipoVia tipoVia;
 	public String via;
 	public String localidad;

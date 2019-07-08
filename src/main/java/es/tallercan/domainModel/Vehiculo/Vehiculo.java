@@ -13,6 +13,7 @@ public class Vehiculo {
 	public String bastidor;
 	public Date fecha1matr;
 	public Date fechaProxITV;
+	@Enumerated
 	public TipoCombustible tipoCombustible;
 	public Date fechaMaxGarantia;
 	public Date fechaAlta;

@@ -3,9 +3,12 @@ package es.tallercan.domainModel.Vehiculo;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Factura.Factura;
 import es.tallercan.domainModel.Persona.Empleado;
 
+@Embeddable
 public class Presupuesto {
 	public String observaciones;
 	public double costePresupuesto;
@@ -13,10 +16,13 @@ public class Presupuesto {
 	public Date fechaAceptacionSeguro;
 	public Date fechaAceptacionCliente;
 	public Date fechaAnulacion;
+	@Enumerated(value = EnumType.STRING)
 	public EstadoPresupuesto estado;
-	
+	@Embedded
 	public Empleado empleadoResponsable;
+	@Embedded
 	public Set<GastoMaterial> gastosMateriales;
+	@OneToMany
 	public Set<Factura> facturas;
 	
 	public String getObservaciones() {

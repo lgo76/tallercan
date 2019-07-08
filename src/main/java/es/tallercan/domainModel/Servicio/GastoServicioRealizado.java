@@ -3,9 +3,12 @@ package es.tallercan.domainModel.Servicio;
 import java.time.format.DateTimeFormatter;
 import java.util.Set;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Factura.Orden_Trabajo;
 import es.tallercan.domainModel.Persona.Empleado;
 
+@Embeddable
 public class GastoServicioRealizado {
 	public double precio;
 	public int unidades;

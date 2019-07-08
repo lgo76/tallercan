@@ -3,14 +3,14 @@ import javax.persistence.*;
 
 @Embeddable
 public class Fabricante {
-	public String nombre;
+	public String fabricante;
 
 	public String getNombre() {
-		return nombre;
+		return fabricante;
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.fabricante = nombre;
 	}
 	
 	

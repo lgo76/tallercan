@@ -1,14 +1,17 @@
 package es.tallercan.domainModel.Vehiculo;
 
+import javax.persistence.*;
+
+@Embeddable
 public class Marca {
-	public String name;
+	public String marca;
 
 	public String getName() {
-		return name;
+		return marca;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.marca = name;
 	}
 
 }

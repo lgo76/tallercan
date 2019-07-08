@@ -13,7 +13,6 @@ public class Material {
 	
 	
 	@Embedded
-	@JoinColumn(name="nombreFabricante", insertable=false, updatable=false )
 	public Fabricante fabricante;
 	
 	public String getNombre() {

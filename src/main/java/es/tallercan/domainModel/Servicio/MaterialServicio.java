@@ -1,10 +1,15 @@
 package es.tallercan.domainModel.Servicio;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Material.Material;
 
+@Embeddable
 public class MaterialServicio {
 	public int unidades;
+	@OneToOne
 	public Material material;
+	@OneToOne
 	public Servicio servicio;
 	public int getUnidades() {
 		return unidades;

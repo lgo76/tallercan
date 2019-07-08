@@ -1,10 +1,15 @@
 package es.tallercan.domainModel.Vehiculo;
 
+import javax.persistence.*;
+
 import es.tallercan.domainModel.Servicio.Servicio;
 
+@Embeddable
 public class Modelo {
 	public String name;
+	@Embedded
 	public Marca marca;
+	@OneToOne
 	public Servicio servicio;
 	
 	public String getName() {

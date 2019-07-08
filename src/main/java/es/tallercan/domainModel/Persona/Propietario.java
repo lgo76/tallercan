@@ -1,5 +1,8 @@
 package es.tallercan.domainModel.Persona;
 
+import javax.persistence.*;
+
+@Embeddable
 public class Propietario extends Persona {
 	public String personaContacto;
 	public String sms;
