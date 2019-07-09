@@ -20,9 +20,13 @@ public class Orden_Trabajo {
 	public Date fechaPrevistaFin;
 	public double importeTotal;
 	
+	@Embedded
 	public Presupuesto presupuesto;
+	@Embedded
 	public Empleado empleadoPreparacion;
+	@Embedded
 	public Empleado empleadoEntrega;
+	@OneToMany
 	public Set<Factura> facturas;
 	
 	public String getObservaciones() {
