@@ -1,53 +1,61 @@
 Entities:
--Calendario
--Factura
--Material
--Pago
--Persona
--Servicio 
--Usuario
--Vehiculo
+-Calendario (ok, pero lo quitamos)
+-Factura (ok)
+-Material (ok)
+-Pago (ok)
+-Persona (ok)
+-Servicio (ok) 
+-Usuario (ok)
+-Vehiculo (ok)
 
 Value objects:
--Semana laboral
--GastoServicioRealizado
--MaterialServicio
--Departamento
--Documento(?)
--EstadoOrden_trabajo
--Orden_Trabajo (?)
--Fabricante
--MetodoPago
--CC
--Cheque
--Tarjeta
--Cat_prof
--DatosBancarios
--Direccion
--Empleado
--No_laboral
--Pais
--Propietario
--Provincia
--TipoVia
--Log
--Aseguradora
--EstadoPresupuesto
--GastoMaterial
--Marca
--Modelo
--Presupuesto (Entity?)
--Recepción (Entity?)
--Siniestro (?)
--TipoCombustible
+-Semana laboral (entity)
+-GastoServicioRealizado (ok)
+-MaterialServicio (ok)
+-Departamento (entity)
+-Documento (entity)
+-EstadoOrden_trabajo (ok)
+-Orden_Trabajo (entity)
+-Fabricante (entity/valueObject, más lo segundo)
+-MetodoPago (¿?)
+-CC (entity)
+-Cheque (entity)
+-Tarjeta (entity)
+-Cat_prof (entity/valueObject, más lo primero)
+-DatosBancarios (ok)
+-Direccion (ok)
+-Empleado (entity)
+-No_laboral (¿¿?? aquí hay que averiguar qué es esto)
+-Pais (ok)
+-Propietario (ok)
+-Provincia (ok)
+-TipoVia (ok)
+-Log (entity)
+-Aseguradora (entity)
+-EstadoPresupuesto (ok)
+-GastoMaterial (ok)
+-Marca (entity/valueObject, más lo segundo)
+-Modelo (entity/valueObject, más lo segundo) 
+-Presupuesto (Entity)
+-Recepción (Entity)
+-Siniestro (Entity)
+-TipoCombustible (ValueObject)
 
 Aggregates:
--Calendario-Semana laboral
--Servicio-GastoServicioRealizado-MaterialServicio-Departamento
--Factura-Documento-Orden_Trabajo-EstadoOrden_Trabajo
--Material-Fabricante
--Pago-MetodoPago-CC-Cheque-Tarjeta
--Persona-Cat_Prof-DatosBancarios-Direccion-Empleado-No_laboral-Pais-Persona-Propietario-Provincia-TipoVia
--Usuario-Log
--Vehiculo-TipoCombustible-GastoMaterial-Marca-Modelo-Presupuesto-EstadoPresupuesto-Recepcion-Siniestro-Aseguradora
+- Vehiculo-TipoCombustible
+- Modelo-Marca 
+- Persona-Propietario-Cat_Prof-DatosBancarios-Direccion-Pais-Provincia-TipoVia
+- 
+- Recepcion-Siniestro-Aseguradora
+- Servicio-GastoMaterialPorServicio
+- Departamento
+- Factura
+- Presupuesto-EstadoPresupuesto
+- Documento
+- Orden_Trabajo-EstadoOrdenTrabajo-GastoMaterialRealizado-GastoServicioRealizado 
+- Material-Fabricante
+- Pago-MetodoPago-CC-Cheque-Tarjeta
+- Empleado-No_laboral
+- -
+- Calendario-Semana laboral
 
