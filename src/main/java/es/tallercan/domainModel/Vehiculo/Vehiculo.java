@@ -13,8 +13,6 @@ public class Vehiculo {
 	public String bastidor;
 	public Date fecha1matr;
 	public Date fechaProxITV;
-	@Enumerated
-	public TipoCombustible tipoCombustible;
 	public Date fechaMaxGarantia;
 	public Date fechaAlta;
 	public Date fechaAnulacion;
@@ -47,12 +45,6 @@ public class Vehiculo {
 	}
 	public void setFechaProxITV(Date fechaProxITV) {
 		this.fechaProxITV = fechaProxITV;
-	}
-	public TipoCombustible getTipoCombustible() {
-		return tipoCombustible;
-	}
-	public void setTipoCombustible(TipoCombustible tipoCombustible) {
-		this.tipoCombustible = tipoCombustible;
 	}
 	public Date getFechaMaxGarantia() {
 		return fechaMaxGarantia;

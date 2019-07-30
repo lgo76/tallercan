@@ -11,7 +11,22 @@ public class Modelo {
 	public Marca marca;
 	@OneToOne
 	public Servicio servicio;
+	@Enumerated
+	public TipoCombustible tipoCombustible;
+	public int potencia;
 	
+	public TipoCombustible getTipoCombustible() {
+		return tipoCombustible;
+	}
+	public void setTipoCombustible(TipoCombustible tipoCombustible) {
+		this.tipoCombustible = tipoCombustible;
+	}
+	public int getPotencia() {
+		return potencia;
+	}
+	public void setPotencia(int potencia) {
+		this.potencia = potencia;
+	}
 	public String getName() {
 		return name;
 	}
