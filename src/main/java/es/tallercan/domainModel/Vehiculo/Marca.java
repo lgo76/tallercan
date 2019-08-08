@@ -2,8 +2,11 @@ package es.tallercan.domainModel.Vehiculo;
 
 import javax.persistence.*;
 
-@Embeddable
+@Entity
 public class Marca {
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	public long id;
 	public String marca;
 
 	public String getName() {

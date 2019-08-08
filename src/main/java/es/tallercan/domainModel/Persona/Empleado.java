@@ -7,12 +7,13 @@ import javax.persistence.*;
 
 import es.tallercan.domainModel.Servicio.Departamento;
 
-@Embeddable
+@Entity
 public class Empleado extends Persona{
-	public String idEmpleado;
+	
+	public long idEmpleado;
 	public Date fecha1contrato;
 	public int numHijos;
-	@Embedded
+	@ManyToOne(cascade = CascadeType.ALL)
 	public Departamento departamento;
 	@Embedded
 	public Cat_Prof cat_prof;
@@ -31,10 +32,10 @@ public class Empleado extends Persona{
 	public void setNo_laborales(Set<No_Laboral> no_laborales) {
 		this.no_laborales = no_laborales;
 	}
-	public String getIdEmpleado() {
+	public long getIdEmpleado() {
 		return idEmpleado;
 	}
-	public void setIdEmpleado(String idEmpleado) {
+	public void setIdEmpleado(long idEmpleado) {
 		this.idEmpleado = idEmpleado;
 	}
 	public Date getFecha1contrato() {

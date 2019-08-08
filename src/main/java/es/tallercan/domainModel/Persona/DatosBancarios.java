@@ -7,7 +7,7 @@ public class DatosBancarios {
 	public String banco;
 	public String sucursal;
 	public String DC;
-	public int numero;
+	public String numero;
 	public String getBanco() {
 		return banco;
 	}
@@ -26,10 +26,10 @@ public class DatosBancarios {
 	public void setDC(String dC) {
 		DC = dC;
 	}
-	public int getNumero() {
+	public String getNumero() {
 		return numero;
 	}
-	public void setNumero(int numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 	

@@ -1,0 +1,256 @@
+Recurso: /vehiculos
+Verbos Aceptados: GET
+
+GET	/vehiculos - Devuelve todos los vehiculos
+
+Parámetros:
+Respuestas: 200 Ok, 400 Bad Request
+	
+Modelo de Respuesta:
+[
+    {
+        "matricula": 1488FFR,
+        "bastidor": VSSZZZ6KZ1R149943 ,
+        "fecha1matr": "2009-03-31T22:00:00.000+0000",
+        "fechaProxITV": "2019-10-15T22:00:00.000+0000",
+        "fechaAlta": "2017-02-04T09:01:00.000+0000",
+        "fechaAnulacion": ,
+        "fechaModificacion": ,
+        "fechaMaxGarantia": "2019-12-10T23:59:59.000+0000" ,
+        "modelo": {
+        	"nombre":Megane ,
+        	"tipoCombustible": gasolina ,
+        	"potencia": 90,
+        	"marca"{
+        		"nombre": Renault
+        	}
+        },
+        "propietario": {
+        	"id":452644821
+        	"NIF":74587632W
+        	"tfno_fijo":942154785,
+        	"tfno_movil":658475698,
+            "email": ,
+        	"apellido1": ,
+        	"apellido2": ,
+        	"fechaAnulacion": ,
+        	"fechaMaxGarantia": ,
+        	"personaContacto": ,
+        	"sms": 
+        }
+    }
+]
+
+Recurso: /vehiculos/{id}
+Verbos HTTP aceptados: GET, POST, DELETE
+
+GET /vehiculos/{id}
+Respuestas: 200 Ok, 404 Not Found
+
+Modelo de Respuesta:
+[
+    {
+        "matricula": 1488FFR,
+        "bastidor": VSSZZZ6KZ1R149943 ,
+        "fecha1matr": "2009-03-31T22:00:00.000+0000",
+        "fechaProxITV": "2019-10-15T22:00:00.000+0000",
+        "fechaAlta": "2017-02-04T09:01:00.000+0000",
+        "fechaAnulacion": ,
+        "fechaModificacion": ,
+        "fechaMaxGarantia": "2019-12-10T23:59:59.000+0000" ,
+        "modelo": {
+            "nombre":Megane ,
+            "tipoCombustible": gasolina,
+            "potencia": 90,
+            "marca"{
+                "nombre": Renault
+            }
+        },
+        "propietario": {
+            "id":452644821
+            "NIF":74587632W
+            "tfno_fijo":942154785,
+            "tfno_movil":658475698,
+            "email": ,
+            "apellido1": ,
+            "apellido2": ,
+            "fechaAnulacion": ,
+            "fechaMaxGarantia": ,
+            "personaContacto": ,
+            "sms": 
+        }
+    }
+]
+
+POST /vehiculos/{id}
+Respuestas: 201 created, 200 Ok, 404 Not Found
+
+
+[
+    {
+        "matricula": 1488FFR,
+        "bastidor": VSSZZZ6KZ1R149943 ,
+        "fecha1matr": "2009-03-31T22:00:00.000+0000",
+        "fechaProxITV": "2019-10-15T22:00:00.000+0000",
+        "fechaAlta": "2017-02-04T09:01:00.000+0000",
+        "fechaMaxGarantia": "2019-12-10T23:59:59.000+0000" ,
+        "modelo": {
+            "nombre":Megane ,
+            "tipoCombustible": gasolina,
+            "potencia": 90,
+            "marca"{
+                "nombre": Renault
+            }
+        },
+        "propietario": {
+            "id":452644821
+            "NIF":74587632W
+            "tfno_fijo":942154785,
+            "tfno_movil":658475698,
+            "email": ,
+            "apellido1": ,
+            "apellido2": ,
+            "fechaAnulacion": ,
+            "fechaMaxGarantia": ,
+            "personaContacto": ,
+            "sms": 
+        }
+    }
+]
+
+
+Recurso: /vehiculos/{id}/recepciones
+GET /vehiculos/{id}/recepciones - Devuelve todas las recepciones de un vehiculo
+
+Parámetros:
+
+Respuestas: 200 Ok, 400 Bad Request
+    
+Modelo de Respuesta:
+[
+    {
+        "tipoRecepcion": Cambio de rueda,
+        "indicaciones": ,
+        "motivo": Cambio de rueda,
+        "kms": 150000,
+        "fechaHoraEntrega": 2019-04-10T11:05:59.000+0000,
+        "siniestro":
+        {
+        }
+    },
+    {
+        "tipoRecepcion": Fallo en el motor,
+        "indicaciones": ,
+        "motivo": Fallo en el motor,
+        "kms": 150000,
+        "fechaHoraEntrega": 2019-04-10T11:05:59.000+0000,
+        "siniestro":
+        {
+            "numSiniestroTaller": 105,
+            "numSiniestroComp": 487521,
+            "perito": ,
+            "asegurado": true,
+            "fechaSiniestro": 2019-04-09T11:05:59.000+0000,
+            "daños": motor,
+            "poliza": ,
+            "franquicia": ,
+            "aseguradora":
+            {
+                "nombre": "AXA"
+            }
+        }
+    },
+
+
+]
+
+Recurso: /vehiculos/{id}/recepciones/{id}
+Verbos HTTP aceptados: GET, POST, DELETE
+GET  /vehiculos/{id}/recepciones/{id}
+Respuestas: 200 Ok, 404 Not Found
+
+Modelo de Respuesta:
+[
+ {
+        "tipoRecepcion": Cambio de rueda,
+        "indicaciones": ,
+        "motivo": Cambio de rueda,
+        "kms": 150000,
+        "fechaHoraEntrega": 2019-04-10T11:05:59.000+0000,
+        "siniestro":
+        {
+        }
+    }
+]
+POST  /vehiculos/{id}/recepciones/{id}
+Respuestas: 201 created, 200 Ok, 404 Not Found
+Modelo de Respuesta:
+[
+    {
+        "tipoRecepcion": Cambio de rueda,
+        "indicaciones": ,
+        "motivo": Cambio de rueda,
+        "kms": 150000,
+        "fechaHoraEntrega": 2019-04-10T11:05:59.000+0000,
+        "siniestro":
+        {
+        }
+    }
+]
+
+Recurso: /vehiculos/{id}/recepciones/{id}/presupuestos
+
+Parámetros:
+
+Respuestas: 200 Ok, 400 Bad Request
+    
+Modelo de Respuesta:
+[
+    {
+        "costePresupuesto": 500.0,
+        "observaciones": ,
+        "fechaAviso":2019-04-10T11:05:59.000+0000,
+        "fechaPreparacion":,
+        "fechaAceptacionSeguro":,
+        "fechaAceptacionCliente":,
+        "fechaAnulacion":,
+        "estado":ACEPTADA
+
+    }
+]
+
+Recurso: /vehiculos/{id}/recepciones/{id}/presupuestos/{id}
+Verbos HTTP aceptados: GET, POST, DELETE
+GET  /vehiculos/{id}/recepciones/{id}/presupuestos/{id}
+Respuestas: 200 Ok, 404 Not Found
+Modelo de Respuesta:
+[
+    {
+        "costePresupuesto": 500.0,
+        "observaciones": ,
+        "fechaAviso":2019-04-10T11:05:59.000+0000,
+        "fechaPreparacion":,
+        "fechaAceptacionSeguro":,
+        "fechaAceptacionCliente":,
+        "fechaAnulacion":,
+        "estado":ACEPTADA
+
+    }
+]
+POST  /vehiculos/{id}/recepciones/{id}
+Respuestas: 201 created, 200 Ok, 404 Not Found
+Modelo de Respuesta:
+[{
+        "tipoRecepcion": Cambio de rueda,
+        "indicaciones": ,
+        "motivo": Cambio de rueda,
+        "kms": 150000,
+        "fechaHoraEntrega": 2019-04-10T11:05:59.000+0000,
+        "siniestro":
+        {
+        }
+}]
+
+
+Recurso: /vehiculos/{id}/recepciones/{id}/presupuestos/{id}/ordenes_trabajo
+Recurso: /vehiculos/{id}/recepciones/{id}/presupuestos/{id}/ordenes_trabajo/{id}

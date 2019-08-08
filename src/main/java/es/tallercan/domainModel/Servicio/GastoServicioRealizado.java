@@ -1,11 +1,10 @@
 package es.tallercan.domainModel.Servicio;
 
 import java.time.format.DateTimeFormatter;
-import java.util.Set;
 
 import javax.persistence.*;
 
-import es.tallercan.domainModel.Factura.Orden_Trabajo;
+
 import es.tallercan.domainModel.Persona.Empleado;
 
 @Embeddable
@@ -18,6 +17,12 @@ public class GastoServicioRealizado {
 	public DateTimeFormatter fechaHoraIniReal;
 	public DateTimeFormatter fechaHoraFinReal;
 	public String observaciones;
+	
+	@OneToOne
+	public Servicio servicio;
+	
+	@OneToOne
+	public Empleado empleadoResponsable;
 	
 	public double getPrecio() {
 		return precio;
@@ -67,17 +72,11 @@ public class GastoServicioRealizado {
 	public void setObservaciones(String observaciones) {
 		this.observaciones = observaciones;
 	}
-	public Set<Servicio> getServicios() {
-		return servicios;
+	public Servicio getServicio() {
+		return servicio;
 	}
-	public void setServicios(Set<Servicio> servicios) {
-		this.servicios = servicios;
-	}
-	public Set<Orden_Trabajo> getOrdenes_trabajo() {
-		return ordenes_trabajo;
-	}
-	public void setOrdenes_trabajo(Set<Orden_Trabajo> ordenes_trabajo) {
-		this.ordenes_trabajo = ordenes_trabajo;
+	public void setServicio(Servicio servicio) {
+		this.servicio = servicio;
 	}
 	public Empleado getEmpleadoResponsable() {
 		return empleadoResponsable;
@@ -85,8 +84,6 @@ public class GastoServicioRealizado {
 	public void setEmpleadoResponsable(Empleado empleadoResponsable) {
 		this.empleadoResponsable = empleadoResponsable;
 	}
-	public Set<Servicio> servicios;
-	public Set<Orden_Trabajo> ordenes_trabajo;
-	public Empleado empleadoResponsable;
+	
 	
 }

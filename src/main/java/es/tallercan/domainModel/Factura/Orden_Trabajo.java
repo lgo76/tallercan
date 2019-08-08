@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.persistence.*;
 
 import es.tallercan.domainModel.Persona.Empleado;
+import es.tallercan.domainModel.Servicio.GastoServicioRealizado;
 import es.tallercan.domainModel.Vehiculo.Presupuesto;
 
 @Embeddable
@@ -22,13 +23,22 @@ public class Orden_Trabajo {
 	
 	@Embedded
 	public Presupuesto presupuesto;
-	@Embedded
+	@OneToOne
 	public Empleado empleadoPreparacion;
-	@Embedded
+	@OneToOne
 	public Empleado empleadoEntrega;
 	@OneToMany
 	public Set<Factura> facturas;
+	@Embedded
+	public Set<GastoServicioRealizado> gastosServiciosReales;
 	
+	
+	public Set<GastoServicioRealizado> getGastosServiciosReales() {
+		return gastosServiciosReales;
+	}
+	public void setGastosServiciosReales(Set<GastoServicioRealizado> gastosServiciosReales) {
+		this.gastosServiciosReales = gastosServiciosReales;
+	}
 	public String getObservaciones() {
 		return observaciones;
 	}

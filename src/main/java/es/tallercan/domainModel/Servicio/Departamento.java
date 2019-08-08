@@ -4,13 +4,28 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-@Embeddable
+import es.tallercan.domainModel.Persona.Empleado;
+
+@Entity
 public class Departamento {
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	public long id;
 	public String nombre;
 	public String acronimo;
 	
 	@OneToMany
 	public Set<Servicio> servicios;
+	@OneToMany( cascade = CascadeType.ALL)
+	public Set<Empleado> empleados;
+
+	public Set<Empleado> getEmpleados() {
+		return empleados;
+	}
+
+	public void setEmpleados(Set<Empleado> empleados) {
+		this.empleados = empleados;
+	}
 
 	public String getNombre() {
 		return nombre;

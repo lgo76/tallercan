@@ -16,7 +16,7 @@ public class Siniestro {
 	public String franquicia;
 	@Embedded
 	public Recepcion recepcion;
-	@Embedded
+	@OneToOne
 	public Aseguradora aseguradora;
 	public String getNumSiniestroTaller() {
 		return numSiniestroTaller;

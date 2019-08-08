@@ -4,10 +4,13 @@ import javax.persistence.*;
 
 import es.tallercan.domainModel.Servicio.Servicio;
 
-@Embeddable
+@Entity
 public class Modelo {
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	public long id;
 	public String name;
-	@Embedded
+	@OneToOne
 	public Marca marca;
 	@OneToOne
 	public Servicio servicio;

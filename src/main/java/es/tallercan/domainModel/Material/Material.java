@@ -10,9 +10,7 @@ public class Material {
 	public double precioVenta;
 	public double precioCompra;
 	public int stock;
-	
-	
-	@Embedded
+	@OneToOne(cascade=CascadeType.PERSIST)
 	public Fabricante fabricante;
 	
 	public String getNombre() {
