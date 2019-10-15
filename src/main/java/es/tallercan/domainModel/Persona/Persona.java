@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 @Entity
 public class Persona {
+	
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	public long id;

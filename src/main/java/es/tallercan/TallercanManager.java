@@ -56,6 +56,8 @@ public class TallercanManager implements CommandLineRunner {
 	DepartamentoRepository dr;
 	@Autowired
 	ServicioRepository sr;
+	@Autowired
+	VehiculoRepository vr;
 	
 	
 	
@@ -215,6 +217,7 @@ public class TallercanManager implements CommandLineRunner {
 		propr.save(p2);
 		
 		lg.info("Propietarios creados");
+		createVehiculos(p1,p2);
 	}
 	
 	private void createServicios(Modelo m1, Modelo m2, Modelo m3) {
@@ -315,7 +318,21 @@ public class TallercanManager implements CommandLineRunner {
 	}
 	
 	
-	private void createVehiculos(Propietario p1, Propietario p2, Propietario p3){
+	private void createVehiculos(Propietario p1, Propietario p2){
+		Calendar calendar1 = Calendar.getInstance();
+		calendar1.set(2017, 02, 04);
+		Vehiculo v1 = new Vehiculo();
+		v1.setPropietario(p1);
+		v1.setBastidor("bastidor1");
+		v1.setFecha1matr(calendar1.getTime());
+		v1.setFechaAlta(calendar1.getTime());
+		v1.setFechaMaxGarantia(calendar1.getTime());
+		v1.setFechaProxITV(calendar1.getTime());
+		v1.setMatricula("1488FFR");
+		
+		vr.save(v1);
+		
+		lg.info("Vehiculos creados");
 		
 	}
 	
@@ -333,6 +350,7 @@ public class TallercanManager implements CommandLineRunner {
 		createFabricantes();
 		createPropietarios();
 		createEmpleados();
+		
 		
 		/*createPersona();
 		createServicio();
